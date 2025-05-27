@@ -77,36 +77,31 @@ RESTful API for creating and managing personalized training programs, including 
 
 To run a local instance, follow these steps:
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/SimonMMB/Sprint_5.git
-   ```
-2. Install dependencies: 
+1. Install dependencies: 
    ```sh
    composer install
-   npm install
    ```
-3. Copy `.env.example` to `.env`  
-4. Generate app key:  
+2. Copy `.env.example` to `.env`  
+3. Generate app key:  
    ```sh
    php artisan key:generate
    ```
-5. Configure database credentials in `.env`  
-6. Start your MySQL server and create a database named `StayStrong`
-7. Generate Passport keys:
+4. Configure database credentials in `.env`  
+5. Start your MySQL server and create a database named `StayStrong`
+6. Generate Passport keys:
    ```sh
    php artisan passport:install
    ```
    *Use `--force` if keys already exist*
-8. Run migrations and seed the database:
+7. Run migrations and seed the database:
    ```sh
    php artisan migrate --seed
    ```
-9. Start the local server:
+8. Start the local server:
    ```sh
    php artisan serve
    ```
-10. Use Postman or any REST client to test the API
+9. Use Postman or any REST client to test the API
 
 <p align="left">(<a href="#readme-top">back to top</a>)</p>
 

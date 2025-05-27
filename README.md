@@ -161,6 +161,8 @@ src/
    cd stay-strong
    ```
 
+**NOTE:** To run individual project components (MVC, REST API, or frontend client) independently, enter the respective directory and follow the README instructions. 
+
 2. **Choose your implementation**
    
    **For MVC Laravel (fullstack-laravel/):**
@@ -185,6 +187,7 @@ src/
    cp .env.example .env
    php artisan key:generate
    php artisan passport:install
+   # Note: Use `--force` if keys already exist
    # Configure database in .env
    php artisan migrate --seed
    php artisan serve
