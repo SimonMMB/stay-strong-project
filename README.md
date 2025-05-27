@@ -5,10 +5,10 @@
 ## 📁 Project Structure
 
 ```
-stay-strong/
-├── fullstack-laravel/    # Laravel MVC app (Sprint 4 - monolithic)
-├── backend-api/          # Laravel REST API (Sprint 5 - backend only)  
-└── frontend-client/      # React client (Sprint 5 Vol II - frontend)
+stay-strong-project/
+├── fullstack-laravel/    # Laravel MVC app (Sprint 4 Fullstack specialization - monolithic)
+├── backend-api/          # Laravel REST API (Sprint 5 Vol I Fullstack specialization - backend only)  
+└── frontend-client/      # React client (Sprint 5 Vol II Fullstack specialization - frontend)
 ```
 
 ## 🎯 Project Overview
@@ -31,7 +31,7 @@ stay-strong/
 A complete Laravel application following MVC architecture with integrated frontend and backend.
 
 ### **Technologies**
-- **Backend**: Laravel 11 (PHP 8+)
+- **Backend**: Laravel 12 (PHP 8+)
 - **Frontend**: Blade templates + Tailwind CSS + Livewire + JavaScript
 - **Authentication**: Laravel Breeze
 - **Database**: MySQL
@@ -56,7 +56,7 @@ A complete Laravel application following MVC architecture with integrated fronte
 A standalone Laravel API designed to serve frontend clients with comprehensive authentication and authorization.
 
 ### **Technologies**
-- **Backend**: Laravel 11 (PHP 8.2+)
+- **Backend**: Laravel 12 (PHP 8.2+)
 - **Authentication**: Laravel Passport (OAuth 2.0)
 - **Authorization**: Spatie Permission (role-based)
 - **Documentation**: Swagger/OpenAPI
@@ -157,11 +157,9 @@ src/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/SimonMMB/stay-strong.git
-   cd stay-strong
+   git clone https://github.com/SimonMMB/stay-strong-project.git
+   cd stay-strong-project
    ```
-
-**NOTE:** To run individual project components (MVC, REST API, or frontend client) independently, enter the respective directory and follow the README instructions. 
 
 2. **Choose your implementation**
    
@@ -170,9 +168,9 @@ src/
    cd fullstack-laravel
    composer install
    npm install
-   cp .env.example .env
+   # Copy .env.example into .env
    php artisan key:generate
-   # Configure database in .env
+   # Start a MySQL server and create a DB called 'staystrong-web'
    php artisan migrate --seed
    npm run dev
    php artisan serve
@@ -184,11 +182,10 @@ src/
    ```bash
    cd backend-api
    composer install
-   cp .env.example .env
+   # Copy .env.example into .env
    php artisan key:generate
+   # Start a MySQL server and create a DB called 'staystrong-api'
    php artisan passport:install
-   # Note: Use `--force` if keys already exist
-   # Configure database in .env
    php artisan migrate --seed
    php artisan serve
    ```
@@ -228,7 +225,7 @@ Each implementation demonstrates different aspects of modern web development, fr
 
 | Component | Laravel MVC | REST API | React Client |
 |-----------|-------------|----------|--------------|
-| **Backend** | Laravel 11 + Blade | Laravel 11 API | - |
+| **Backend** | Laravel 12 + Blade | Laravel 12 | - |
 | **Frontend** | Blade + Livewire + Tailwind | - | React 19 + Tailwind |
 | **Auth** | Breeze | Passport (OAuth 2.0) | JWT tokens |
 | **Database** | MySQL | MySQL | API consumption |

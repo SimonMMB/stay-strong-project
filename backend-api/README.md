@@ -81,27 +81,25 @@ To run a local instance, follow these steps:
    ```sh
    composer install
    ```
-2. Copy `.env.example` to `.env`  
+2. Copy .env.example to .env.<br>
 3. Generate app key:  
    ```sh
    php artisan key:generate
-   ```
-4. Configure database credentials in `.env`  
-5. Start your MySQL server and create a database named `StayStrong`
-6. Generate Passport keys:
+   ``` 
+4. Start a MySQL server (via XAMPP/WAMP/Laragon/MAMP or standalone) and create a DB called 'staystrong-api'.
+5. Generate Passport keys:
    ```sh
    php artisan passport:install
    ```
-   *Use `--force` if keys already exist*
-7. Run migrations and seed the database:
+6. Run migrations and seed the database:
    ```sh
    php artisan migrate --seed
    ```
-8. Start the local server:
+7. Start the local server:
    ```sh
    php artisan serve
    ```
-9. Use Postman or any REST client to test the API
+8. Use Postman or any REST client to test the API
 
 <p align="left">(<a href="#readme-top">back to top</a>)</p>
 

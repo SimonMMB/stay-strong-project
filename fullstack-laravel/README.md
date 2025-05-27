@@ -36,35 +36,30 @@ Web application for creating and managing personalized training programs, with e
 ## Getting Started
 To get a local copy up and running follow these simple steps:
 
-1. Copy .env.example to .env.<br>
-2. Run: 
+1. Instal dependencies: 
    ```sh
    composer install
+   npm install
    ```
+2. Copy .env.example to .env.<br>
 3. Run: 
    ```sh
    php artisan key:generate
    ```
-3. Configure your DB credentials in .env.<br>
-4. Start a MySQL server (via XAMPP/WAMP/Laragon/MAMP or standalone) and create a DB called 'staystrong'.
-5. Run the migrations:
+4. Start a MySQL server (via XAMPP/WAMP/Laragon/MAMP or standalone) and create a DB called 'staystrong-web'.
+5. Run the migrations and seed 'exercises' table:
    ```sh
-   php artisan migrate
+   php artisan migrate --seed
    ```
-6. Seed 'excercises' table:
+6. Run NPM: 
    ```sh
-   php artisan db:seed --class=ExercisesTableSeeder
-   ```
-7. Run NPM: 
-   ```sh
-   npm install
    npm run dev
    ```
-8. Run PHP built-in web server: 
+7. Run PHP built-in web server: 
    ```sh
    php artisan serve
    ```
-9. Log in and follow the instructions to create your personalized training programs.
+8. Log in and follow the instructions to create your personalized training programs.
 
 <p align="left">(<a href="#readme-top">back to top</a>)</p>
 
